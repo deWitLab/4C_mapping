@@ -21,7 +21,7 @@ The fragment map will be strored in the directory `fragment_map/`
 We would like to filter the fragment map for repetitive fragments, therefore we will map all the fragments back to genome we selected them from to test whether they are unique or not. For the fragment map we just created will should run the following command:
 
 ```
-perl getRepeats.pl fragment_map/ 49 ucsc.hg19.fa test_repeat/
+perl getRepeats.pl fragment_map/ GATC 49 ucsc.hg19.fa test_repeat/
 ```
 
 The results will be placed in the directory test_repeat/. Note the 49, this is the length of the ligated fragment including the restriction site. Note that for every different sequencing length for you 4C experiment, you will need to create a new repeat map. So if you have a sequence length of 65, a primer of 20nt and a 4nt restriction site, your sequence length should be `65 - 20 + 4 = 49`.
